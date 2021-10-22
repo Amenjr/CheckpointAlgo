@@ -1,0 +1,23 @@
+ALGORITHM CHekpoint
+VAR
+    num_char,num_mot,num_voyelle:INTEGER;
+    C:char;
+BEGIN
+    num_char:=0;
+    num_mot:=0;
+    num_voyelle:=0;
+
+    WHILE (C NOT '.') DO
+    read(C);
+    num_char++;
+    IF (C==' ') THEN
+        num_mot++;
+    END_IF
+    IF(C in[A,E,I,O,U,Y,a,e,i,o,u,y])
+       num_voyelle++;
+    END_WHILE
+    write("si le point est considéré comme caractére le nombre de caractére est ",num_char+1);
+    write("si le point n'est pas considéré comme caractére ,le nombre de caractére est",num_char);
+    write("le nombre de voyelle est",num_voyelle);
+    write("le nombre de mots est ",num_mot);
+END
